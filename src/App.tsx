@@ -12,12 +12,9 @@ function App() {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    async function listaAllUsers() {
-      const response = await api.get('users')
-  
+    api.get('users').then((response) => {
       setUsers(response.data)
-    }
-    listaAllUsers()
+    })
   },[users])
 
 
