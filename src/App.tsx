@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import api from './services/api';
 import UserForm from './components/UserForm';
 import UserItem, { IUser } from './components/UserItem';
@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     async function listaAllUsers() {
-      const response = await api.get('/users')
+      const response = await api.get('users')
   
       setUsers(response.data)
     }
