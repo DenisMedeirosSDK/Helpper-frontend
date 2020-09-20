@@ -9,7 +9,7 @@ import './Global.css';
 import './Sidebar.css';
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState<IUser[]>([])
 
   useEffect(() => {
     api.get('users').then((response) => {
@@ -27,7 +27,7 @@ function App() {
 
       <main>
         <ul>
-          {users.map((user: IUser) => {
+          {users.map(user => {
             return <UserItem key={user._id} user={user} />
           })}
         </ul>
