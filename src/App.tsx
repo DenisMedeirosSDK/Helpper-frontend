@@ -27,9 +27,9 @@ function App() {
 
       <main>
         <ul>
-          {users.map(user => {
-            return <UserItem key={user._id} user={user} />
-          })}
+          {users.map((user) => (
+            <UserItem key={user._id} user={user} />
+          ))}
         </ul>
       </main>
     </div>
